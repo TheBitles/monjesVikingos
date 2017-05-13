@@ -4,12 +4,20 @@ package monjes.vikingos;
 public class Berserker implements Estado {
 
 	private short cantCalmas = 0;
-	EstadoActual ea;
+	EstadosPosibles ea;
 	
 	public Berserker(){
-		ea = EstadoActual.BERSERKER;
+		ea = EstadosPosibles.BERSERKER;
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Berserker -> cantCalmas=" + String.valueOf(cantCalmas);
+	}
+
 	@Override
 	public Estado calmarse() {
 		if (++cantCalmas >= 3){
@@ -17,7 +25,7 @@ public class Berserker implements Estado {
 			return new Natural();
 		}
 		
-		return null;
+		return this;
 		
 	}
 

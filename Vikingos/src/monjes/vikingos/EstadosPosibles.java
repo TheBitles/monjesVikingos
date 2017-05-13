@@ -1,5 +1,5 @@
 package monjes.vikingos;
 
-public enum EstadoActual {
+public enum EstadosPosibles {
 	BERSERKER, NATURAL, MEDITACION;
 }	

@@ -1,21 +1,27 @@
 package monjes.vikingos;
 
 public class Meditacion implements Estado {
-	EstadoActual ea;
+	EstadosPosibles ea;
 	
 	public Meditacion() {
-		ea = EstadoActual.MEDITACION;
+		ea = EstadosPosibles.MEDITACION;
 	}
 
 	@Override
 	public Estado calmarse() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Meditacion();
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Meditacion";
 	}
 
 	@Override
 	public Estado recibirAtaque(int ataque) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

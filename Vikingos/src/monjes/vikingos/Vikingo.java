@@ -6,19 +6,43 @@ public class Vikingo {
 	private Estado estado;
 	private int ataque;
 	private int salud;
-	private EstadoActual estadoActual;
+	//private EstadosPosibles estadoActualDelVikingo;
 	
-
+	public static void main(String[] args) {
+		Vikingo v = new Vikingo(10,100);		
+		System.out.println(v.estado.toString());
+		//System.out.println(Estado.estadoActualEnEstado);
+		v.calmarse();
+		System.out.println(v.estado.toString());
+		v.calmarse();
+		System.out.println(v.estado.toString());
+		v.calmarse();
+		System.out.println(v.estado.toString());
+		v.calmarse();
+		System.out.println(v.estado.toString());
+		v.calmarse();
+		System.out.println(v.estado.toString());
+		v.calmarse();
+		System.out.println(v.estado.toString());
+		v.calmarse();
+		System.out.println(v.estado.toString());
+		
+		//System.out.println(Estado.estadoActualEnEstado);
+		//System.out.println(Estado.estadoActualEnEstado.toString());
+		
+	}
 
 	public Vikingo(int atq, int sld) {
+		
 		ataque = atq;
 		salud = sld;
-		estadoActual = EstadoActual.NATURAL;
+		estado = new Berserker();
+		//estadoActualDelVikingo = EstadosPosibles.NATURAL;
 		
 	}
 	
 	public void calmarse() {
-		this.estado = this.estado.calmarse();
+		estado = estado.calmarse();
 	}
 	
 	public void recibirAtaque(int ataque) {
@@ -48,24 +72,24 @@ public class Vikingo {
 		this.salud = salud;
 	}
 
-	public EstadoActual getEstado() {
-		return estadoActual;
+	/**
+	 * @return the estado
+	 */
+	public Estado getEstado() {
+		return estado;
 	}
 
-	public void setEstado(EstadoActual estado) {
-		this.estadoActual = estado;
+	/**
+	 * @param estado the estado to set
+	 */
+	public void setEstado(Estado estado) {
+		this.estado = estado;
 	}
 
 	
 
 	
-	public static void main(String[] args) {
-		Vikingo v = new Vikingo(10,100);		
-		System.out.println(v.estado.estadoActual.toString());
-		v.calmarse();
-		System.out.println(v.estado.estadoActual.toString());
-		
-	}
+
 	
 
 	
