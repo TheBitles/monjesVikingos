@@ -46,7 +46,7 @@ public class Vikingo {
 	}
 	
 	public void recibirAtaque(int ataque) {
-		this.estado = this.estado.recibirAtaque(ataque);
+		estado = estado.recibirAtaque(100 * ataque / salud);
 	}
 	
 	

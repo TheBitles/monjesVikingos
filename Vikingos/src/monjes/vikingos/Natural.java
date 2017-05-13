@@ -20,9 +20,8 @@ public class Natural implements Estado {
 	}
 
 	@Override
-	public Estado recibirAtaque(int ataque) {
-		
-		return null;
+	public Estado recibirAtaque(double porcentajeDeSaludQueSeReduce) {
+		return porcentajeDeSaludQueSeReduce > 15 ? new Berserker() : this;
 	}
 
 }

@@ -30,9 +30,9 @@ public class Berserker implements Estado {
 	}
 
 	@Override
-	public Estado recibirAtaque(int ataque) {
-		// TODO Auto-generated method stub
-		return null;
+	public Estado recibirAtaque(double porcentaje) {
+		--cantCalmas;
+		return this;
 	}
 	
 	

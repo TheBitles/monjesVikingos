@@ -21,8 +21,8 @@ public class Meditacion implements Estado {
 	}
 
 	@Override
-	public Estado recibirAtaque(int ataque) {
-		return null;
+	public Estado recibirAtaque(double porcentaje) {
+		return porcentaje > 5 ? new Natural() : this;
 	}
 
 }
